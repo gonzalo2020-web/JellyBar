@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DsaCrypt</name>
+    </assembly>
+    <members>
+        <member name="T:Dsa.DsaCrypt.Crypt">
+            <summary>
+            Clase para encriptar y desencriptar strings
+            </summary>
+        </member>
+        <member name="M:Dsa.DsaCrypt.Crypt.Encrypt(System.String,System.String)">
+            <summary>
+            Encripta el string especificado.
+            </summary>
+            <param name="input">El string a encriptar.</param>
+            <param name="key">La llave con la que se encriptara el string.</param>
+            <returns>El string encriptado</returns>
+        </member>
+        <member name="M:Dsa.DsaCrypt.Crypt.Decrypt(System.String,System.String)">
+            <summary>
+            Desencripta el string especificado
+            </summary>
+            <param name="input">El string a desencriptar.</param>
+            <param name="key">La llave con la que se encriptó el string.</param>
+            <returns>El string desencriptado</returns>
+        </member>
+        <member name="M:Dsa.DsaCrypt.Crypt.DecryptionData(System.String,System.String,System.Boolean)">
+            <summary>
+            Desencripta el string especificado the data.
+            </summary>
+            <param name="textEncryption">El string a descencriptar.</param>
+            <param name="key">La llave con la que se encriptó el string</param>
+            <param name="usehashing">if set to <c>true</c> [usehashing].</param>
+            <returns>El string desencriptado</returns>
+        </member>
+    </members>
+</doc>

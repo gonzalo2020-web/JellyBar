@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dbms</name>
+    </assembly>
+    <members>
+        <member name="T:Dsa.Dbms.Conn">
+            <summary>
+            Objeto para crear y regresar una conexión independientemente de si está Encriptadoa o desencriptada.
+            </summary>
+        </member>
+        <member name="M:Dsa.Dbms.Conn.GetConn">
+            <summary>
+            Regresa una Conexión GetData.
+            </summary>
+            <returns>Regresa un Objeto GetData con la conexión a la base de datos.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.Conn.GetConn(System.String)">
+            <summary>
+            Regresa una Conexión GetData.
+            </summary>
+            <param name="connStringSectionName">El nombre de la sección en el archivo de configuración.</param>
+            <returns>Regresa un Objeto GetData con la conexión a la base de datos.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.Conn.GetConn(System.String,System.String)">
+            <summary>
+            Regresa una Conexión GetData.
+            </summary>
+            <param name="userName">El LogonID del Usuario.</param>
+            <param name="userPassword">El password del usuario.</param>
+            <returns>
+            Regresa un Objeto GetData con la conexión a la base de datos.
+            </returns>
+        </member>
+        <member name="M:Dsa.Dbms.Conn.GetConn(System.String,System.String,System.String)">
+            <summary>
+            Regresa una Conexión GetData.
+            </summary>
+            <param name="connStringSectionName">El nombre de la sección en el archivo de configuración.</param>
+            <param name="userName">El LogonID del Usuario.</param>
+            <param name="userPassword">El password del usuario.</param>
+            <returns>
+            Regresa un Objeto GetData con la conexión a la base de datos.
+            </returns>
+        </member>
+        <member name="M:Dsa.Dbms.Conn.GetCustomConn(System.Collections.Generic.KeyValuePair{System.String,System.String})">
+            <summary>
+            Obtiene una conexión a la medida
+            </summary>
+            <param name="connectionInfo">La información de la conexión.</param>
+            <returns>
+            Regresa un Objeto GetData con la conexión a la base de datos.
+            </returns>
+        </member>
+        <member name="T:Dsa.Dbms.GetData">
+            <summary>
+            Biblioteca de acceso a la base de datos de cualquier proveedor.
+            </summary>
+            <remarks>
+            Esta biblioteca se encuentra dentro del archivo Dbms.dll,
+            está incluida en el Namespace Dsa.atbodbms.
+            </remarks>
+        </member>
+        <member name="F:Dsa.Dbms.GetData._connectionString">
+             <summary>
+            La cadena de conexión.
+             </summary>
+        </member>
+        <member name="F:Dsa.Dbms.GetData._noLockSentence">
+            <summary>
+            Sentencia SQL para evitar los DEADLOCK en la base de datos cuando se corre un SELECT
+            </summary>
+        </member>
+        <member name="P:Dsa.Dbms.GetData.SentenciaSQL">
+            <summary>
+            Asigna el atributo sentencia SQL.
+            </summary>
+            <value>La sentencia SQL.</value>
+        </member>
+        <member name="P:Dsa.Dbms.GetData.SentenciasSQL">
+            <summary>
+            Obtiene una lista de Sentencias SQL.
+            </summary>
+            <value>Una  lista de sentencias SQL.</value>
+        </member>
+        <member name="P:Dsa.Dbms.GetData.ServerName">
+            <summary>
+            Obtiene el nombre o ip del servidor
+            </summary>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase GetData con la conexión por omisión (Inteknus).
+            </summary>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase GetDataEnc con conexion especifica y usuario
+            </summary>
+            <param name="userName">El LogonID del usuario</param>
+            <param name="userPassword">La contraseña del usuario</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.#ctor(System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase GetDataEnc con conexion especifica y usuario
+            </summary>
+            <param name="connStringSectionName">La sección en el archivo de configuración en donde se guardó la cadena de conexión</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase GetDataEnc con conexion especifica y usuario
+            </summary>
+            <param name="connStringSectionName">La sección en el archivo de configuración en donde se guardó la cadena de conexión</param>
+            <param name="userName">El LogonID del usuario</param>
+            <param name="userPassword">La contraseña del usuario</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.#ctor(System.Collections.Generic.KeyValuePair{System.String,System.String})">
+            <summary>
+            Inicializa una nueva instancia de la clase GetData con cadena de conexion y proveedor de datos a la medida.
+            </summary>
+            <param name="connectionInfo">La información de la conexion donde key:DataProvider, value:ConnectionString.</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.GetSingleData">
+            <summary>
+            Obtiene un dato como resultado de una sentencia SQL.
+            </summary>
+            <remarks>Se usa generalmente con las funciones SQL de sum, count, max, min, etc. 
+            </remarks>
+            <returns>Una cadena con el resultado de la sentencia.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.SetIngresNoLocks(System.Data.Common.DbCommand)">
+            <summary>
+            Establece la conexion a la base de datos como NO LOCKS
+            </summary>
+            <param name="cmd">Command</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.SetIngresNoLocks(System.Data.Common.DbDataAdapter)">
+            <summary>
+            Establece la conexion a la base de datos como NO LOCKS
+            </summary>
+            <param name="da">Data Adapter</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.GetDataTable">
+            <summary>
+            Obtiene un DataTable con los datos que resultan de correr una sentencia SQL
+            </summary>
+            <returns>Un DataTable con los datos que resultan de la consulta SQL.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.GetDataTable(System.String)">
+            <summary>
+            Obtiene un DataTable con los datos que resultan de correr una sentencia SQL
+            </summary>
+            <param name="dataTableName">El nombre del DataTable.</param> 
+            <returns>Un DataTable con los datos que resultan de la consulta SQL.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.GetDataSet">
+            <summary>
+            Obtiene un DataSet con los datos que resultan de correr una sentencia SQL
+            </summary>
+            <returns>Un Objeto DataSet con los datos que resultan de la consulta SQL.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.GetDataSet(System.String)">
+            <summary>
+            Obtiene un DataSet con los datos que resultan de correr una sentencia SQL
+            </summary>
+            <param name="dataTableName">El nombre del DataTable.</param>
+            <returns>
+            Un Objeto DataSet con los datos que resultan de la consulta SQL.
+            </returns>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.SaveData">
+            <summary>
+            Ejecuta una sentencia SQL contra la base de datos.
+            </summary>
+            <returns>El número de registros afectados.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.SaveDataID">
+            <summary>
+            Ejecuta una sentencia SQL contra la base de datos.
+            </summary>
+            <returns>Un entero con el resultado de la sentencia SQL.</returns>
+            <remarks>La sentendia SQL debe contener una clausula SELECT para que este método regrese un dato.
+            p.ej. para SQL Server debe terminar con SELECT SCOPE_IDENTITY()</remarks>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.TSaveData">
+            <summary>
+            Ejecuta una serie de Sentencias SQL contra la base de datos en una sola transacción
+            </summary>
+            <remarks>
+            Si alguna de las sentencias falla no ocurre ningún cambio en la base de datos y una nueva excepcion es creada.
+            </remarks>
+            <returns>El número de registros afectados o -1 si alguna de las sentencias falla.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.ExecuteProcedure">
+            <summary>
+            Ejecuta el Procedimiento almacenado definido en la SentenciaSQL;
+            </summary>
+            <returns>Un entero con el resultado de la sentencia SQL.</returns>
+            <exception cref="T:System.Exception">
+            </exception>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.ExecuteProcedure(System.String)">
+            <summary>
+            Ejecuta el Procedimiento especificado en el argumento
+            </summary>
+            <param name="procedureText">Un string con el nombre del procedimiento almacenado.</param>
+            <returns>Una DataTable con los datos que regresa el procedimiento almacenado.</returns>
+            <exception cref="T:System.Exception">
+            </exception>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.InitVariables">
+            <summary>
+            Inicializa el contenido de las sentencias SQL y los parámetros.
+            </summary>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.DataTableAppend(System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            Agrega el contenido de un DataTable a otro.
+            </summary>
+            <param name="dt1">El DataTable al que hay que agregar el otro.</param>
+            <param name="dt2">El DataTable que hay que agregar.</param>
+            <returns>Un DataTable con los datos de los dos DataTables</returns>
+            <returns>Un DataTable con el contenido de los dos DataTables combinados.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.AddSentence(System.String)">
+            <summary>
+            Agrega una sentencia SQL a la lista de Sentencias para ser usadas dentro de una transacción contra la base de datos.
+            </summary>
+            <param name="sql">La Sentencia SQL.</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.AddParameter(System.Object,System.String)">
+            <summary>
+            Agrega el parametro a la lista de parametros.
+            </summary>
+            <param name="value">El valor del parametro.</param>
+            <param name="name">El nombre del paranetro.</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.IncludeParameters(System.Data.Common.DbCommand)">
+            <summary>
+            Agrega los parametros al comando
+            </summary>
+            <param name="cmd">El comando.</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.GetDataSet(System.Collections.Generic.List{System.String})">
+            <summary>
+            Obtiene un DataSet con los datos que resultan de correr una sentencia SQL
+            </summary>
+            <param name="SenteciasSelect">The sentecias select Nota: Debe de tener el FROM con mayusculas para detectar
+            el nombre de la tabla.</param>
+            <returns>
+            Un Objeto DataSet con los datos que resultan de la consulta SQL.
+            </returns>
+            <exception cref="T:System.Exception">
+            </exception>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.GetServerName">
+            <summary>
+            Obtiene el nombre o ip del servidor a partir de la cadena de conexión.
+            </summary>
+            <returns>Un string con el nombre o ip del servidor.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.GetData.Dispose">
+            <summary>
+            Libera los recursos usados por la clase GetData
+            </summary>
+        </member>
+        <member name="T:Dsa.Dbms.GetDataEnc">
+             <summary>
+             Biblioteca de acceso a la base de datos de cualquier proveedor.
+             Requiere que la cadena de conexión este encriptada
+             </summary>
+             <remarks>
+             Esta biblioteca se encuentra dentro del archivo atbodbms.dll.
+             está incluida en el Namespace atbo.atbodbms.
+            </remarks>
+        </member>
+        <member name="M:Dsa.Dbms.GetDataEnc.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase GetData con la conexión por omisión (giis).
+            </summary>
+        </member>
+        <member name="M:Dsa.Dbms.GetDataEnc.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase GetDataEnc con la conexion por omision con usuario.
+            </summary>
+            <param name="userName">El LogonID del usuario</param>
+            <param name="userPassword">La contraseña del usuario</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetDataEnc.#ctor(System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase GetDataEnc.
+            </summary>
+            <param name="connStringSectionName">La sección en el archivo de configuración en donde se guardó la cadena de conexión</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetDataEnc.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase GetDataEnc con conexion especifica y usuario
+            </summary>
+            <param name="connStringSectionName">La sección en el archivo de configuración en donde se guardó la cadena de conexión</param>
+            <param name="userName">El LogonID del usuario</param>
+            <param name="userPassword">La contraseña del usuario</param>
+        </member>
+        <member name="M:Dsa.Dbms.GetDataEnc.Decrypt">
+            <summary>
+            Desencripta la cadena de conexión.
+            </summary>
+        </member>
+        <member name="T:Dsa.Dbms.IGetData">
+            <summary>
+            Interface para Clase Dbms de Acceso a Datos de DSA.
+            </summary>
+        </member>
+        <member name="P:Dsa.Dbms.IGetData.SentenciasSQL">
+            <summary>
+            Un arreglo de Sentencias SQL que se ejecutarán 
+            </summary>
+        </member>
+        <member name="P:Dsa.Dbms.IGetData.SentenciaSQL">
+            <summary>
+            Asigna la sentencia SQL con que se construirá el objeto GetData.
+            </summary>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.GetDataSet">
+            <summary>
+            Obtiene un DataSet a partir de las Sentencia SQL.
+            </summary>
+            <returns>Un DataSet con un DataTable llamado DataTable con los datos obtenidos a partir de la Sentencia SQL.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.GetDataSet(System.String)">
+            <summary>
+            Obtiene un DataSet con unDataTable con el nombre especificado.
+            </summary>
+            <param name="dataTableName">El nombre del DataTable deseado.</param>
+            <returns>Un DataSet con un DataTable llamado DataTable con los datos obtenidos a partir de la Sentencia SQL.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.GetDataTable">
+            <summary>
+            Gets the data table.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.GetDataTable(System.String)">
+            <summary>
+            Obtiene un DataTable con el nombre especificado con los datos obtenidos a partir de la Sentencia SQL.
+            </summary>
+            <param name="dataTableName">El nombre del DataTable deseado.</param>
+            <returns>Un DataTable llamado DataTable con los datos obtenidos a partir de la Sentencia SQL.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.DataTableAppend(System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            Agrega el contenido de un DataTable a otro.
+            </summary>
+            <param name="dt1">El DataTable al que hay que agregar el otro.</param>
+            <param name="dt2">El DataTable que hay que agregar.</param>
+            <returns>Un DataTable con los datos de los dos DataTables</returns>
+            <returns>Un DataTable con el contenido de los dos DataTables combinados.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.GetSingleData">
+            <summary>
+            Obtiene un dato como resultado de una sentencia SQL.
+            </summary>
+            <remarks>Se usa generalmente con las funciones SQL de sum, count, max, min, etc. 
+            </remarks>
+            <returns>Una cadena con el resultado de la sentencia.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.SaveData">
+            <summary>
+            Ejecuta una sentencia SQL contra la base de datos.
+            </summary>
+            <returns>El número de registros afectados.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.TSaveData">
+            <summary>
+            Ejecuta una serie de Sentencias SQL contra la base de datos en una sola transacción
+            </summary>
+            <remarks>
+            Si alguna de las sentencias falla no ocurre ningún cambio en la base de datos y una nueva excepcion es creada.
+            </remarks>
+            <returns>El número de registros afectados o -1 si alguna de las sentencias falla.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.SaveDataID">
+            <summary>
+            Ejecuta una sentencia SQL contra la base de datos.
+            </summary>
+            <returns>Un entero con el resultado de la sentencia SQL.</returns>
+        </member>
+        <member name="M:Dsa.Dbms.IGetData.Dispose">
+            <summary>
+            Libera los recursos usados por la clase GetData
+            </summary>
+        </member>
+    </members>
+</doc>

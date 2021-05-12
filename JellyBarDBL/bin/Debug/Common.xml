@@ -1,0 +1,2701 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="T:Dsa.Common.Client">
+            <summary>
+            Clase para manejar los clientes de ATBO.
+            </summary>
+            <remarks>
+            Esta biblioteca se encuentra dentro del archivo DsaCommon.dll
+            Esta incluida en en el Namespace DsaDbms.dll
+            </remarks>
+        </member>
+        <member name="P:Dsa.Common.Client.ClientID">
+            <summary>
+            Obtiene o Asigna el Atributo ClientID
+            </summary>
+            <value>El Identificador del cliente</value>
+            <remarks>Ejemplo GM</remarks>
+        </member>
+        <member name="P:Dsa.Common.Client.ClientDescription">
+            <summary>
+            Obtiene o asigna el atributo de la descripción del cliente
+            </summary>
+            <value>The client description.</value>
+            <remarks>Ejemplo: GENERAL MOTORS (TRUCKS)</remarks>
+        </member>
+        <member name="P:Dsa.Common.Client.ObjStat">
+            <summary>
+            Obtiene el estado del objeto tipo Stat  
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Client.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto tipo string.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Client.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Client"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Client.#ctor(System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Client"/>.
+            </summary>
+            <param name="ClientID">El ID del Cliente</param>
+        </member>
+        <member name="M:Dsa.Common.Client.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Client"/>.
+            </summary>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.Client.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Client"/>.
+            </summary>
+            <param name="ClientID">El ID del Cliente</param>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.Client.Save">
+            <summary>
+            Maneja la persistencia del objeto Client a la base de datos.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Client.Delete">
+            <summary>
+            Marca al objeto para ser borrado cuando se llame al metodo Save.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Client.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Client.FillField(System.Data.DataRow)">
+            <summary>
+            Fills the field.
+            </summary>
+            <param name="dr">Datarow con los datos .</param>
+        </member>
+        <member name="M:Dsa.Common.Client.DeleteNow">
+            <summary>
+            Marca el objeto para ser borrado y ejecuta inmediatamente el Metodo Save(); para eliminar el registro de la tabla.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Client.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="sentenciaSQl">La Sentencia SQL</param>
+            <param name="parameters">Parametros Opcionales para la consulta</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:Dsa.Common.Clients">
+            <summary>
+            Obtiene listas de los clientes
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Clients.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Clients.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Clients.ClientCatalog">
+            <summary>
+            Obtiene catalogo de todos los clientes
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Clients.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Clients"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Clients.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Clients"/> para el usuario que se conecta a la DB.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Clients.GetClients">
+             <summary>
+            Obtiene la lista de los clientes.
+             </summary>
+             <value>Un <i>DataTable</i> con lista de los clientes.</value>
+        </member>
+        <member name="M:Dsa.Common.Clients.SetPreLoaded">
+            <summary>
+            Cambia el objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.DbmsParameter">
+            <summary>
+            Clase para majenar los paremetros
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.DbmsParameter.ParameterName">
+            <summary>
+            Obtiene o asigna el nombre del parametro.
+            </summary>
+            <value>Un <i>String</i> con el nombre del parametro.</value>
+        </member>
+        <member name="P:Dsa.Common.DbmsParameter.ParameterValue">
+            <summary>
+            Obtiene o asigna el valor del parametro.
+            </summary>
+            <value>Un <i>Object</i> con el valor del parametro.</value>
+        </member>
+        <member name="M:Dsa.Common.DbmsParameter.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.DbmsParameter"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DbmsParameter.#ctor(System.Object,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.DbmsParameter"/>.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.DbmsParameters">
+            <summary>
+            clase para manejar los parametros para la ejecucion del query
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.DbmsParameters.Parameters">
+            <summary>
+            Gets the parameters.
+            </summary>
+            <value>
+            The parameters.
+            </value>
+        </member>
+        <member name="M:Dsa.Common.DbmsParameters.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.DbmsParameters"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DbmsParameters.#ctor(Dsa.Common.DbmsParameter)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.DbmsParameters"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DbmsParameters.Add(Dsa.Common.DbmsParameter)">
+            <summary>
+            Adds the specified dp.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Dsa.Common.DbmsParameters.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DbmsParameters.Contains(Dsa.Common.DbmsParameter)">
+            <summary>
+            Determines whether [contains] [the specified item].
+            </summary>
+            <param name="item">The DbmsParameter to find.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Common.DbmsParameters.Remove(Dsa.Common.DbmsParameter)">
+            <summary>
+            Removes the specified item.
+            </summary>
+            <param name="item">The DbmsParameter objet to be removed.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dsa.Common.Depto">
+            <summary>
+            Clase para manejar la informacion de los departamentos
+            </summary>
+            <remarks>
+            Esta biblioteca se encuentra dentro del archivo DsaCommun.dll
+            Esta incluida en en el Namespace Dsa.Dbms
+            Implemementa la Interfase IStatable
+            </remarks>
+        </member>
+        <member name="P:Dsa.Common.Depto.DeptoID">
+            <summary>
+            Obtiene o asigna el Id del departamento.
+            </summary>
+            <value>Un <i>String</i> con el Id del departamento.</value>
+        </member>
+        <member name="P:Dsa.Common.Depto.DeptoCode">
+            <summary>
+            Obtiene o asigna el codigo del departamento.
+            </summary>
+            <value>Un <i>String</i> con el codigo del departamento.</value>
+        </member>
+        <member name="P:Dsa.Common.Depto.DeptoName">
+            <summary>
+            Obtiene o asigna el nombre del departamento.
+            </summary>
+            <value>Un <i>String</i> con el nombre del departamento.</value>
+        </member>
+        <member name="P:Dsa.Common.Depto.ObjStat">
+            <summary>
+            Obtiene el estado del objeto tipo Stat
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Depto.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto tipo string
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Depto.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Depto"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Depto.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Depto"/>.
+            </summary>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.Depto.#ctor(System.Int32)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Depto"/>.
+            </summary>
+            <value>Un <i>int</i> con el ID del Departamento.</value>
+            <param name="DeptoID">Numero de ID del departamento</param>
+        </member>
+        <member name="M:Dsa.Common.Depto.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Depto"/> conectandose a la DB con el logon id y password enviado.
+            </summary>
+            <value>Un <i>int</i> con el ID del Departamento.</value>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+            <param name="DeptoID">Id del departamento</param>
+        </member>
+        <member name="M:Dsa.Common.Depto.#ctor(System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Depto" />.
+            </summary>
+            <param name="DeptoCode">Codigo del Departamento Ejemplo: 03535</param>
+            <value>Un <i>String</i> con el codigo del Departamento.</value>
+        </member>
+        <member name="M:Dsa.Common.Depto.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Depto"/> conectandose a la DB con el logon id y password enviado.
+            </summary>
+            <value>Un <i>String</i> con el codigo del Departamento.</value>
+            <param name="DeptoCode">Codigo del departamento Ejemplo: 03535</param>
+            <param name="UserName">El Logon ID del usuario</param>
+            <param name="usrPassword">El password del usuario</param>
+        </member>
+        <member name="M:Dsa.Common.Depto.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Depto.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Depto.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="T:Dsa.Common.Deptos">
+            <summary>
+            Objeto para obtener el departemento del usuario
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Deptos.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Deptos.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Deptos.DeptoCatalog">
+            <summary>
+            Obtiene la lista de departamentos
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Deptos.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Deptos"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Deptos.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Deptos"/>.
+            </summary>
+            <param name="UserName">Logon ID del usuario que se conecta a la DB</param> 
+            <param name="UserPasswrod">Password del usuario que se conecta a la DB</param>
+        </member>
+        <member name="M:Dsa.Common.Deptos.GetDeptos">
+            <summary>
+            Metodo que regresa una lista de departamentos.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Deptos.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Deptos.LoadData(System.String)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Deptos.FillFields(Dsa.Dbms.GetData)">
+            <summary>
+            Fills the fields.
+            </summary>
+            <param name="gd">The gd.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Deptos.FillField(System.Data.DataRow)">
+            <summary>
+            Fills the field.
+            </summary>
+            <param name="dr">The dr.</param>
+        </member>
+        <member name="M:Dsa.Common.Deptos.Refresh">
+            <summary>
+            Reinicia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Deptos.Add(System.Object)">
+            <summary>
+            Agregar a la lista
+            </summary>
+            <param name="obj">Objeto de la misma clase de la lista</param>
+        </member>
+        <member name="M:Dsa.Common.Deptos.Clear">
+            <summary>
+            Limpia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Deptos.Contains(System.Object)">
+            <summary>
+            Determina si en la lista existe un objeto a buscar.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Common.Deptos.CopyTo(System.Object[],System.Int32)">
+            <summary>
+            Copia un objeto que se encuenta en la lista.
+            </summary>
+            <param name="array">Arreglo del Objeto</param>
+            <param name="arrayIndex">Indice el objeto a copiar.</param>
+        </member>
+        <member name="M:Dsa.Common.Deptos.Remove(System.Object)">
+            <summary>
+            Elimina un objeto en especifico.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dsa.Common.Employee">
+            <summary>
+            Objeto para menejo de los empleados
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Employee.UsrID">
+            <summary>
+            Obtiene Id del empleado en la tabla empleyee.
+            </summary>
+            <value>Un Long para el id del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Name">
+            <summary>
+            Obtiene o Asigna Nombre del empleado.
+            </summary>
+            <value>Un string con el nombre del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.LastName">
+            <summary>
+            Obtiene o Asigna Apellido del empleado
+            </summary>
+            <value>un stirng con el apellido del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Rfc">
+            <summary>
+            Obtiene o Asigna Numero de RFC del empleado.
+            </summary>
+            <value>Un string con el RFC del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Birthday">
+            <summary>
+            Obtiene o Asigna Fecha de nacimiento del empleado.
+            </summary>
+            <value> un DataTime con la fecha de nacimiento.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Payroll">
+            <summary>
+            Obtiene o Asigna Número de Reloj del empleado.
+            </summary>
+            <value>un string con un numero de reloj del empleado</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Imss">
+            <summary>
+            Obtiene o Asigna Numero de IMSS del empelado.
+            </summary>
+            <value>un string con el numero del imss.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.DateAdmission">
+             <summary>
+             Obtiene o Asigna Fecha de ingreso del empleado.
+             </summary>
+            <value>un Datatime de la fecha de ingreso del  empleado</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Address">
+            <summary>
+            Obtiene o Asigna Direccion del domicilio del empleado.
+            </summary>
+            <value>un string con la direccion del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.PhoneNumber">
+            <summary>
+            Obtiene o Asigna Numero de telefono personal del empleado.
+            </summary>
+            <value>un string con el numero de telefono personal del empleado.</value>    
+        </member>
+        <member name="P:Dsa.Common.Employee.Ext">
+            <summary>
+            Obtiene o Asigna Numero de extension telefonica donde se encuentra el empleado.
+            </summary>
+            <value>Un string para la extension telefonica del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Status">
+            <summary>
+            Obtiene o Asigna Estado para activar y desactivar el empleado..
+            </summary>
+            <value>Un  string para saber el estado del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Logonid">
+            <summary>
+            Obtiene o Asigna Login Id del empleado si se le ha asignado.
+            </summary>
+            <value>Un string con el login id del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Email">
+            <summary>
+            Obtiene o Asigna  Direccion de correo electronico del empleado si aplica.
+            </summary>
+            <value>Un string con la direccion de correo electronico</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Empid">
+            <summary>
+            Obtiene o Asigna Numero de empleado que aparace en el People Search.
+            </summary>
+            <value>Un string con el numero de empleado del People Search</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.PlantID">
+            <summary>
+            Obtiene o asigna el id de la planta del empledo
+            </summary>
+            <value>Un string  el id de la planta del empledo.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.DeptoID">
+            <summary>
+            Obtiene o asigna el departamento del empleado.
+            </summary>
+            <value>Un <i>int</i> con el departamento del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.PosID">
+            <summary>
+            Obtiene o asigna el Id del puesto del empleado.
+            </summary>
+            <value>Un <i>long</i> con el Id del puesto del empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Depto">
+            <summary>
+            Obtiene Departamento del empleado
+            </summary>
+            <value>Un objeto Depto del departamento del usuario</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Position">
+            <summary>
+            Obtiene Puesto del empleado
+            </summary>
+            <value>Un objeto Position del puesto del empleado</value>
+        </member>
+        <member name="P:Dsa.Common.Employee.Plant">
+            <summary>
+             Obtiene Planta donde se encuentra el empleado.
+            </summary>
+            <value>un Plant donde se localiza el empleado.</value>
+        </member>
+        <member name="M:Dsa.Common.Employee.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employee"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Employee.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employee"/>.
+            </summary>
+            <param name="userName">Logon id del usuario para conectarse a la DB</param>
+            <param name="userPassword">Password del usuario para conectarse a la DB</param>
+        </member>
+        <member name="M:Dsa.Common.Employee.#ctor(System.Int64)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employee"/>.
+            </summary>
+            <value>Un long con employeeID.</value>	
+            <param name="employeeID">Numero de Id de la tabla employee.</param>
+        </member>
+        <member name="M:Dsa.Common.Employee.#ctor(System.Int64,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employee"/>.
+            </summary>
+            <value>Un long con employeeID.</value>			
+            <param name="employeeID">Numero de empleado Id de la tabla employee</param>
+            <param name="userName">Logon id del usuario para conectarse a la Db</param>
+            <param name="userPassword">Password del usuario para conectase a la DB</param>
+            
+        </member>
+        <member name="M:Dsa.Common.Employee.#ctor(System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employee" />.
+            </summary>
+            <param name="employeeUserName">Logo Id del empleado.</param>
+            <value>Un long con employeeID.</value>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Employee.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employee"/>.
+            </summary>
+            <value>Un long con employeeID.</value>	
+            <param name="employeeUserName">Logo Id o Nomina del empleado. </param>
+            <param name="userName">Logon ID del usuario para conectarsea a la DB</param>
+            <param name="userPassword">Password del usuari para conectase a la DB</param>
+        </member>
+        <member name="M:Dsa.Common.Employee.Save">
+            <summary>
+            Graba el registro el empleado en la tabla employee.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Employee.Delete">
+            <summary>
+            Cambia el estado del objeto a Delete para ser borrado en el metodo Save.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Employee.SetPreLoaded">
+            <summary>
+            Cambia el estado del objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Employee.ChangeUserId(System.Int64)">
+            <summary>
+            Cambia el UserID del objeto
+            </summary>
+            <param name="userID">Long del UserID</param>
+        </member>
+        <member name="M:Dsa.Common.Employee.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Employee.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Employee.DeleteNow">
+            <summary>
+            Marca el objeto para ser borrado y ejecuta inmediatamente el Metodo Save(); para eliminar el registro de la tabla.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.Employees">
+            <summary>
+            Lista de Empleados
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Employees.AllEmployees">
+            <summary>
+            Obtiene todos los empleado registrados en la tabla employee
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Employees.EmployeesByName">
+            <summary>
+            Obtiene todos los empleados registrados en el nombre semejante
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Employees.NombreABuscar">
+            <summary>
+            Obtiene o Asigna el nombre del empleado a buscar
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Employees.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Employees.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto.</value>
+        </member>
+        <member name="M:Dsa.Common.Employees.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employees"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Employees.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employees"/>.
+            </summary>
+            <param name="userName">Logon id del usuario a conectarse a la DB</param>
+            <param name="userPassword">Password del usuario a conectarse a la DB</param>
+        </member>
+        <member name="M:Dsa.Common.Employees.#ctor(System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employees"/>.
+            </summary>
+            <param name="nombreaBusar">Nombre a Buscar</param>
+        </member>
+        <member name="M:Dsa.Common.Employees.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Employees"/>.
+            </summary>
+            <param name="nombreaBusar">Nombre a Buscar</param>
+            <param name="userName">usuario</param>
+            <param name="userPassword">Password</param>
+        </member>
+        <member name="M:Dsa.Common.Employees.SetPreLoaded">
+            <summary>
+            Cambia el estado del objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Employees.GetEmployeeByName">
+            <summary>
+            Filtra la lista de empleados por el nombre
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Employees.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Employees.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Employees.Refresh">
+            <summary>
+            Reinicia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Employees.Add(System.Object)">
+            <summary>
+            Agregars the specified object.
+            </summary>
+            <param name="obj">Agregar un objeto Tipo Empleado</param>
+        </member>
+        <member name="M:Dsa.Common.Employees.Clear">
+            <summary>
+            Limpia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Employees.Contains(System.Object)">
+            <summary>
+            Determines whether [contains] [the specified object].
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Common.Employees.CopyTo(System.Object[],System.Int32)">
+            <summary>
+            Copia un objeto que se encuenta en la lista.
+            </summary>
+            <param name="array">Arreglo del Objeto</param>
+            <param name="arrayIndex">Indice el objeto a copiar.</param>
+        </member>
+        <member name="M:Dsa.Common.Employees.Remove(System.Object)">
+            <summary>
+            Removes the specified item.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dsa.Common.IListable">
+            <summary>
+            Intefase para clases que listan objetos
+            </summary>
+            <seealso cref="T:Dsa.Common.IStatable" />
+        </member>
+        <member name="M:Dsa.Common.IListable.Refresh">
+            <summary>
+            Reinicia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.IListable.Add(System.Object)">
+            <summary>
+            Agrega un objeto a la lista
+            </summary>
+            <param name="obj">El objeto ve se va aagregar</param>
+        </member>
+        <member name="M:Dsa.Common.IListable.Clear">
+            <summary>
+            Limpia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.IListable.Contains(System.Object)">
+            <summary>
+            Determina si en la lista existe un objeto a buscar.
+            </summary>
+            <param name="obj">The object.</param>
+        </member>
+        <member name="M:Dsa.Common.IListable.CopyTo(System.Object[],System.Int32)">
+            <summary>
+            Copia un objeto que se encuenta en la lista.
+            </summary>
+            <param name="array">Arreglo del Objeto</param>
+            <param name="arrayIndex">Indice el objeto a copiar.</param>
+        </member>
+        <member name="M:Dsa.Common.IListable.Remove(System.Object)">
+            <summary>
+            Elimina un objeto en especifico.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dsa.Common.ILoadable">
+            <summary>
+            Interfase para clases que cargan datos
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.ILoadable.FillField(System.Data.DataRow)">
+            <summary>
+            Inicializa la clase con los datos del Datarow.
+            </summary>
+            <param name="dr">valores para inicializar la clase.</param>
+        </member>
+        <member name="M:Dsa.Common.ILoadable.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="sentenciaSQl">La Sentencia SQL</param>
+            <param name="parameters">Parametros Opcionales para la consulta</param>
+        </member>
+        <member name="T:Dsa.Common.ModelYears">
+            <summary>
+            Obtiene lista de años modelos para los tableros
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.ModelYears.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.ModelYears.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto.</value>
+        </member>
+        <member name="M:Dsa.Common.ModelYears.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.ModelYears"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.ModelYears.GetNextModelYears">
+            <summary>
+            Obtiene una lista con siguientes años modelo.
+            </summary>
+            <return>Una  lista con siguientes 5 años modelo.</return>
+        </member>
+        <member name="M:Dsa.Common.ModelYears.GetNextModelYears(System.Int32)">
+            <summary>
+            Obtiene una lista de los siguientes años modelo.
+            </summary>
+            <param name="NumYears">El Número de años modelo deseados.</param>
+            <returns></returns>
+            <value>Una lista con los siguientes años modelo especificados en el argumento <i>NumYears</i>.</value>
+        </member>
+        <member name="M:Dsa.Common.ModelYears.SetPreLoaded">
+            <summary>
+            Cambia el objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.Order">
+            <summary>
+            Clase para manejar las diferentes ordenes de trabajo de ATBO
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Order.ObjStat">
+            <summary>
+            Obtiene  el estado del objeto tipo Stat.
+            </summary>
+            <value>Un <i>GStat</i> con el estado del objeto tipo GStat.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto tipos tring.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto tipos tring.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.OrderID">
+            <summary>
+            Obtiene o asigna el numero de orden.
+            </summary>
+            <value>Un <i>int</i> con el numero de orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.DateOrder">
+            <summary>
+            Obtiene o asigna la fecha en que se genero la orden.
+            </summary>
+            <value>Un <i>string</i> con la fecha en que se genero la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.DueDate">
+            <summary>
+            Obtiene o asigna la fecha de vencimiento de la orden.
+            </summary>
+            <value>Un <i>string</i> con la fecha de vencimiento de la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.OriginatorName">
+            <summary>
+            Obtiene o asigna el nombre del originador de la orden.
+            </summary>
+            <value>Un <i>string</i> con el nombre del originador de la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.CustomerID">
+            <summary>
+            Obtiene o asigna el cliente de la Orden (El nombre de la Planta).
+            </summary>
+            <value>Un <i>string</i> con el cliente de la Orden (El nombre de la Planta).</value>
+        </member>
+        <member name="P:Dsa.Common.Order.Project">
+            <summary>
+            Obtiene o asigna el proyecto (fuente de recursos) de la orden.
+            </summary>
+            <value>Un <i>string</i> con el proyecto (fuente de recursos) de la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.Platform">
+            <summary>
+            Obtiene o asigna el nombre de la plataforma de la orden.
+            </summary>
+            <value>Un <i>string</i> con el nombre de la plataforma de la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.HarnessType">
+            <summary>
+            Obtiene o asigna el tipo de arnes del codigo de la orden.
+            </summary>
+            <value>Un <i>string</i> con el tipo de arnes del codigo de la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.Reference">
+            <summary>
+            Obtiene o asigna la referencia de la orden.
+            </summary>
+            <value>Un <i>string</i> con la referencia de la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.Purpose">
+            <summary>
+            Obtiene o asigna el proposito de la orden.
+            </summary>
+            <value>Un <i>string</i> con el proposito de la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.BoardCode">
+            <summary>
+            Obtiene o asigna el codigo del tablero.
+            </summary>
+            <value>Un <i>string</i> con el codigo del tablero.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.BoardType">
+            <summary>
+            Obtiene o asigna el tipo de tablero del codigo.
+            </summary>
+            <value>Un <i>string</i> con el tipo de tablero del codigo.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.BoardQuantity">
+            <summary>
+            Obtiene o asigna la cantidad de tableros.
+            </summary>
+            <value>Un <i>int</i> con la cantidad de tableros.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.OrderStatus">
+            <summary>
+            Obtiene o asigna el estado de la orden.
+            </summary>
+            <value>Un <i>string</i> con el estado de la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.Remarks">
+            <summary>
+            Obtiene o asigna los comentarios de la orden.
+            </summary>
+            <value>Un <i>string</i> con los comentarios de la orden.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.OrderType">
+            <summary>
+            Obtiene o asigna el tipo de orden (Holders, Material, Tableros, etc.).
+            </summary>
+            <value>Un <i>string</i> con el tipo de orden (Holders, Material, Tableros, etc.).</value>
+        </member>
+        <member name="P:Dsa.Common.Order.OrderTypeDescription">
+            <summary>
+            Obtiene o asigna el la descripcion tipo de orden (Holders, Material, Tableros, Diseño, etc.).
+            </summary>
+            <value>Un <i>string</i> con el tipo de orden (Holders, Material, Tableros, Diseño, etc.).</value>
+        </member>
+        <member name="P:Dsa.Common.Order.JobID">
+            <summary>
+            Obtiene o asigna el numero de la orden de trabajo.
+            </summary>
+            <value>Un <i>int</i> con el numero de la orden de trabajo.</value>
+        </member>
+        <member name="P:Dsa.Common.Order.OrderLocation">
+            <summary>
+            Obtiene o asigna la localizacion de la orden (Cliente o Produccion).
+            </summary>
+            <value>Un <i>string</i> con la localizacion de la orden (Cliente o Produccion).</value>
+        </member>
+        <member name="M:Dsa.Common.Order.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Order"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Order.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Order"/>.
+            </summary>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.Order.#ctor(System.Int64)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Order"/>.
+            </summary>
+            <param name="OrderID">El numero de orden.</param>
+        </member>
+        <member name="M:Dsa.Common.Order.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Order"/>.
+            </summary>
+            <param name="OrderID">El numero de orden.</param>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.Order.Save">
+            <summary>
+            Metodo para grabar, actualizar y borrar en la tabla.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Order.Delete">
+            <summary>
+            Metodo para cambiar al estado del ObjStat A Delete.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Order.SetPreLoaded">
+            <summary>
+            Metodo para  asignar el estado PreLoad al objeto.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Order.SetOrderUser(System.String)">
+            <summary>
+            Agregar el login del usuario para generar la orden cuando sea diferente al usuario en sesion.
+            </summary>
+            <param name="newUser">Login del usuario que se grabar en el wwho en la tabla order</param>
+        </member>
+        <member name="M:Dsa.Common.Order.GetOrderTypeDescrip">
+            <summary>
+            Agrega la descripcion del tipo de orden 
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Order.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Order.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Order.DeleteNow">
+            <summary>
+            Marca el objeto para ser borrado y ejecuta inmediatamente el Metodo Save(); para eliminar el registro de la tabla.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.Plants">
+            <summary>
+            Crea un objeto Plants para mostar una lista de Plant
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Plants.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Plants.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Plants.PlantCatalog">
+            <summary>
+            Obtiene el listado de todas las plantas.
+            </summary>
+            <value>Una Lista de Plant con el listado de todas las plantas.</value>
+        </member>
+        <member name="M:Dsa.Common.Plants.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Plants"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Plants.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Plants"/>.
+            </summary>
+            <param name="UserName">Logon Id del usario para conectarse a la DB</param>   
+            <param name="UserPassword">Password del usuario para conectarse a la DB</param>
+        </member>
+        <member name="M:Dsa.Common.Plants.GetPlantsList">
+            <summary>
+            Obtiene una lista de todas las plantas
+            </summary>
+            <value>Una <i>List</i> de <i>Plant</i> con lista de las Plantas.</value>
+        </member>
+        <member name="M:Dsa.Common.Plants.SetPreLoaded">
+            <summary>
+            Cambia el objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Plants.LoadData(System.String,System.Collections.Generic.List{Dsa.Common.DbmsParameter})">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Plants.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Plants.Refresh">
+            <summary>
+            Reinicia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Plants.Add(System.Object)">
+            <summary>
+            Agregar a la lista
+            </summary>
+            <param name="obj">Objeto de la misma clase de la lista</param>
+        </member>
+        <member name="M:Dsa.Common.Plants.Clear">
+            <summary>
+            Limpia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Plants.Contains(System.Object)">
+            <summary>
+            Determina si en la lista existe un objeto a buscar.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Common.Plants.CopyTo(System.Object[],System.Int32)">
+            <summary>
+            Copia un objeto que se encuenta en la lista.
+            </summary>
+            <param name="array">Arreglo del Objeto</param>
+            <param name="arrayIndex">Indice el objeto a copiar.</param>
+        </member>
+        <member name="M:Dsa.Common.Plants.Remove(System.Object)">
+            <summary>
+            Elimina un objeto en especifico.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dsa.Common.Platforms">
+            <summary>
+            Obtiene diferentes listas de la plataforma
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Platforms.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Platforms.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Platforms.PlatformCatalog">
+            <summary>
+            Obtiene el catalogo de todas las plataformas
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platforms.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Platforms"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platforms.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Platforms"/>.
+            </summary>
+            <param name="userName">Logon Id del usuario para conectarse a la DB</param>
+            <param name="userPassword">Password del usuario para conectarsea a la DB</param>
+        </member>
+        <member name="M:Dsa.Common.Platforms.GetPlatforms">
+            <summary>
+            Obtiene La lista de las plataformas   .
+            </summary>
+            <value>Una <i>List</i> de <i>Platform</i> con lista de las plataformas.</value>
+        </member>
+        <member name="M:Dsa.Common.Platforms.GetPlatformByPCust(System.String)">
+            <summary>
+            Obtiene una lista de las plataformas por cliente.
+            </summary>
+            <param name="pCust">El sufijo que identifica al cliente.</param>
+            <returns>
+            Un DataTable con lista de las plataformas por cliente.
+            </returns>
+        </member>
+        <member name="M:Dsa.Common.Platforms.GetPlatformByCustomer(System.String)">
+            <summary>
+            Obtiene una lista de las plataformas por cliente.
+            </summary>
+            <param name="lstrCustomer">El nombre del cliente.</param>
+            <returns>Un DataTable con lista de las plataformas por cliente.</returns>
+        </member>
+        <member name="M:Dsa.Common.Platforms.SetPreLoaded">
+            <summary>
+            Cambia el objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platforms.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Platforms.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Platforms.Refresh">
+            <summary>
+            Reinicia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platforms.Add(System.Object)">
+            <summary>
+            Agregar a la lista
+            </summary>
+            <param name="obj">Objeto de la misma clase de la lista</param>
+        </member>
+        <member name="M:Dsa.Common.Platforms.Clear">
+            <summary>
+            Limpia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platforms.Contains(System.Object)">
+            <summary>
+            Determina si en la lista existe un objeto a buscar.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Common.Platforms.CopyTo(System.Object[],System.Int32)">
+            <summary>
+            Copia un objeto que se encuenta en la lista.
+            </summary>
+            <param name="array">Arreglo del Objeto</param>
+            <param name="arrayIndex">Indice el objeto a copiar.</param>
+        </member>
+        <member name="M:Dsa.Common.Platforms.Remove(System.Object)">
+            <summary>
+            Elimina un objeto en especifico.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dsa.Common.DsaUser">
+            <summary>
+            Clase para manejar los DsaUser
+            </summary>
+            <remarks>
+            Esta biblioteca se encuentra dentro del archivo Common.dll
+            Esta incluida en en el Namespace Dbms
+            Implemementa la Interfase IStatable
+            </remarks>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.UserID">
+            <summary>
+            Obtiene o asigna el ID del usuario.
+            </summary>
+            <value>Un entero con el número de ID del usuario</value>
+            <remarks>Ejemplo: 36</remarks>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.UserName">
+            <summary>
+            Obtiene el logon ID del usuario.
+            </summary>
+            <value>Un string con el logon Id del usuario.</value>
+            <remarks>Ejemplo: vznpg8</remarks>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.UserLongName">
+            <summary>
+            Obtiene el nombre completo del usuario
+            </summary>
+            <value>Un string con el nombre completo del usuario.</value>
+            <remarks>Ejemplo: René Contreras A.</remarks>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.UserDepto">
+            <summary>
+            Obtiene el departamento del usuario.
+            </summary>
+            <value>Un objeto Depto con el departamento del usuario</value>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.UserMailAddress">
+            <summary>
+            Obtiene la dirección de correo electrónico del usuario del usuario..
+            </summary>
+            <value>Un string con la dirección de correo electrónico del usuario</value>
+            <remarks>Ejemplo: rene@delphi.com</remarks>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.UserEmployeeID">
+            <summary>
+            Obtiene el número de empleado usado en el GSD.
+            </summary>
+            <value>Un string con el número de empleado usado en el GSD.</value>
+            <remarks>Ejemplo: 1124</remarks>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.WebStyle">
+            <summary>
+            Obtiene o asigna el estilo seleccionado por el usuario.
+            </summary>
+            <value>Un string con el estilo seleccionado por el usuario.</value>
+            <remarks>OBSOLETO!!! para usar los temas de DevExpress usar el Atributo DsaStyle</remarks>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.DsaStyle">
+            <summary>
+            Obtiene o asigna el nuevo estilo seleccionado por el usuario.
+            </summary>
+            <value>Un string con el nuevo estilo seleccionado por el usuario.</value>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.ObjStat">
+            <summary>
+            Obtiene el estado del objeto tipo Stat
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto DsaUser</value>
+        </member>
+        <member name="P:Dsa.Common.DsaUser.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto en string
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto DsaUser</value>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.#ctor">
+            <summary>
+            Inicializa una instancia de la clase <see cref="T:Dsa.Common.DsaUser" />.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una instancia de la clase DsaUser con la información del usuario, conectandose a la DB con el logon id y password enviado.
+            </summary>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+            <returns>Un objeto <i>DsaUser</i>.</returns>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.#ctor(System.String)">
+            <summary>
+            Inicializa una instancia de la clase DsaUser con la información del usuario.
+            </summary>
+            <param name="UserName">Un string con el Logon Id del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Inicializa una instancia de la clase DsaUser con la información del usuario,conectandose a la DB con el logon id y password enviado..
+            </summary>
+            <param name="UserName">Un string con el Logon Id del usuario para conectarse a la DB.</param>
+            <param name="UserConsult">Un string con el Logon Id del usario a consultar</param>
+            <param name="userPassword">El password del usuario para conectarse a la DB</param>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.#ctor(System.Int64)">
+            <summary>
+            Inicializa una instacia del DsaUser con el Id del usuario
+            </summary>
+            <param name="UserID">Integer del userId a consultar </param>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.#ctor(System.Int64,System.String,System.String)">
+            <summary>
+            Inicializa una instacia del DsaUser con el Id del usuario
+            </summary>
+            <param name="UserID">long del userId a consultar </param>
+            <param name="UserName">Logon Id del usuario que consulta la DB</param>
+            <param name="UserPasswrod">Password del usuario que consulta la DB</param>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.GetUserData">
+            <summary>
+            Obtiene la informacion del usuario desde la base de datos.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.IsValid">
+            <summary>
+            Revisa si el usuario es valido.
+            </summary>
+            <remarks>OBSOLETO!!!, por favor use la propiedad Stat para comprobar la validez del usuario.</remarks>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.GetCurrentStyle">
+            <summary>
+            Metodo para obtener el tema actual.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.GetCurrentDsaStyle">
+            <summary>
+            Metodo para obtener el nuevo tema actual.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.SetStyle">
+            <summary>
+            Metodo Para asignar el nuevo tema.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.SetDsaStyle">
+            <summary>
+            Metodo Para asignar el nuevo tema.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.Save">
+            <summary>
+            Grabar el usuario en la tabla usr.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.Delete">
+            <summary>
+            Cambia al estado Delete para ser borrardo por el metodo Save. En esta version no esta implementado.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.DsaUser.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="T:Dsa.Common.HarnessType">
+            <summary>
+            Clase que describe el tipo de arnes.
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.HarnessType.HarnessID">
+            <summary>
+            Obtiene o asigna el tipo de arnes.
+            </summary>
+            <value>Un <i>String</i> con el tipo de arnes.</value>
+        </member>
+        <member name="P:Dsa.Common.HarnessType.SBegin">
+            <summary>
+            Obtiene el numero con que comienza el identificador del tipo arnes.
+            </summary>
+            <value>Un <i>int</i> con el numero con que comienza el identificador del arnes.</value>
+        </member>
+        <member name="P:Dsa.Common.HarnessType.Send">
+            <summary>
+            Obtiene o asigna el numero con que termina el identificador del tipo de arnes.
+            </summary>
+            <value>Un <i>int</i> con el numero con que termina el identificador del tipo de arnes.</value>
+        </member>
+        <member name="P:Dsa.Common.HarnessType.Series">
+            <summary>
+            Obtiene una lista de series.
+            </summary>
+            <value>Un List de string  con una lista de series.</value>
+        </member>
+        <member name="P:Dsa.Common.HarnessType.ObjStat">
+            <summary>
+            Obtiene el estado del objeto tipo Stat
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.HarnessType.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto tipo string
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.HarnessType"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.HarnessType"/> para un usuario especifico.
+            </summary>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.#ctor(System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.HarnessType"/> con el id del arnes.
+            </summary>
+            <param name="HarnessID">El ID del HarnessType</param>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.HarnessType"/> para un usuario especifico.
+            </summary>
+            <param name="HarnessID">El ID del HarnessType</param>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="userPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.HarnSeries">
+            <summary>
+            Obtiene la lista de series de los tipos de arnes
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.Save">
+            <summary>
+            Graba el tipo de Arnés.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.Delete">
+            <summary>
+            Marca al objecto para ser borrardo con el metodo Save
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.HarnessType.DeleteNow">
+            <summary>
+            Marca el objeto para ser borrado y ejecuta inmediatamente el Metodo Save(); para eliminar el registro de la tabla.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.HarnessTypes">
+            <summary>
+            Objeto HarnessTypes para obtener los arneses de la tabla cat_harn
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.HarnessTypes.ObjStat">
+            <summary>
+            Obtiene el estado del objeto tipo Stat.
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.HarnessTypes.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto tipo string.
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.HarnessTypes.HarnessTypesList">
+            <summary>
+            Obtiene o asigna la lista de harnid del  harnes.
+            </summary>
+            <value>Una Lista de string con con los harnid del  harnes.</value>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.HarnessTypes"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.HarnessTypes"/>.
+            </summary>
+            <param name="userName">Logon Id del usuario que se conecta a la DB</param>
+            <param name="userPassword">Password del usuario que se conecta a la DB</param>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.GetHarnID">
+            <summary>
+            Metodo para obtener  el tipo de arnes.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.Refresh">
+            <summary>
+            Reinicia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.Add(System.Object)">
+            <summary>
+            Agregar a la lista
+            </summary>
+            <param name="obj">Objeto de la misma clase de la lista</param>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.Clear">
+            <summary>
+            Limpia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.Contains(System.Object)">
+            <summary>
+            Determines whether [contains] [the specified object].
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.CopyTo(System.Object[],System.Int32)">
+            <summary>
+            Copies to.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="arrayIndex">Index of the array.</param>
+        </member>
+        <member name="M:Dsa.Common.HarnessTypes.Remove(System.Object)">
+            <summary>
+            Removes the specified object.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dsa.Common.ISaveable">
+            <summary>
+            Interface para los objetos que deseamos que implementen el control de estado y el control de persistencia en la base de datos.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.ISaveable.Save">
+            <summary>
+            Inserta, Actualiza o borra de la base de datos según el estado del objeto.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.ISaveable.Delete">
+            <summary>
+            Marca el objeto para ser borrado de la base de datos cuando se ejecute el método Save().
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.ISaveable.DeleteNow">
+            <summary>
+            Marca el objeto para ser borrado y ejecuta inmediatamente el Metodo Save(); para eliminar el registro de la tabla.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.IStatable">
+            <summary>
+            Interface para los objetos que deseamos que implementen el control de estado.
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.IStatable.ObjStat">
+            <summary>
+            Obtiene un Stat dependiendo del estado del objeto.
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.IStatable.ObjStatString">
+             <summary>
+            Obtiene un string con la descripción del estado del objeto.
+             </summary>
+        </member>
+        <member name="M:Dsa.Common.IStatable.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.ModelYear">
+            <summary>
+            Crea una clase Model Year para los tableros
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.ModelYear.Year">
+            <summary>
+            Obtiene o asigna el año modelo.
+            </summary>
+            <value>Un <i>string</i> con el año modelo.</value>
+        </member>
+        <member name="P:Dsa.Common.ModelYear.Suffix">
+            <summary>
+            Obtiene o asigna el sufijo.
+            </summary>
+            <value>Un <i>string</i> con el sufijo.</value>
+        </member>
+        <member name="M:Dsa.Common.ModelYear.#ctor">
+            <summary>
+            Crea una nueva instacia del objeto ModelYear
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.ModelYear.#ctor(System.String,System.String)">
+            <summary>
+            Crea una nueva instacia del objeto ModelYear con año y suffijo
+            </summary>
+            <param name="MYear">Año del Model Year</param>
+            <param name="Suffix">Sufijo del Model Year</param>
+        </member>
+        <member name="T:Dsa.Common.Plant">
+            <summary>
+            Clase para manejar las Plantas ATBO.
+            </summary>
+            <remarks>
+            Esta biblioteca se encuentra dentro del archivo atbocommon.dll
+            Esta incluida en en el Namespace atbo.atbo.atbodbms
+            </remarks>
+        </member>
+        <member name="P:Dsa.Common.Plant.PlantID">
+            <summary>
+            Obtiene el ID de la Planta.
+            </summary>
+            <value>Un string con el ID de la planta.</value>
+            <remarks>Ejemplo: RBEX</remarks>
+        </member>
+        <member name="P:Dsa.Common.Plant.PlantDescription">
+            <summary>
+            Obtiene la descripción de la Planta.
+            </summary>
+            <value>Un string con la descripción de la planta.</value>
+            <remarks>RIO BRAVO ELECTRICOS PLANTA 10</remarks>
+        </member>
+        <member name="P:Dsa.Common.Plant.PlantIDAndDescription">
+            <summary>
+            Obtiene el ID y la descripción de la Planta.
+            </summary>
+            <value>Un string con el ID y la descripción de la planta.</value>
+            <remarks>RBEX     RIO BRAVO ELECTRICOS PLANTA 10</remarks>
+        </member>
+        <member name="P:Dsa.Common.Plant.Address">
+            <summary>
+            Obtiene o asigna la dirección de la Planta.
+            </summary>
+            <value>Un string con la dirección de la planta.</value>
+        </member>
+        <member name="P:Dsa.Common.Plant.AtbuID">
+            <summary>
+            Obtiene o asigna a que ATBO pertenece la Planta.
+            </summary>
+            <value>Un string con el ATBU.</value>
+        </member>
+        <member name="P:Dsa.Common.Plant.ObjStat">
+            <summary>
+            Obtiene el estado del objeto en tipo Stat
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Plant.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto en tipo string
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Plant.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Plant"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Plant.#ctor(System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Plant"/> con la planta
+            especificada en el parametro PlantID
+            </summary>
+            <param name="PlantID">El ID de la Planta (customer_id).</param>
+        </member>
+        <member name="M:Dsa.Common.Plant.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Plant"/>.
+            </summary>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.Plant.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Plant"/> con la planta
+            especificada en el parametro PlantID
+            <param name="PlantID">El ID de la Planta (customer_id).</param>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Plant.SetPreLoaded">
+            <summary>
+            Cambia el objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Plant.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Plant.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Plant.GetEboardOwner">
+            <summary>
+            Obtiene el usuario responsable de la planta
+            </summary>
+            <returns>Un DsaUser con el usuario responsable; si este no existe regresa null</returns>
+        </member>
+        <member name="T:Dsa.Common.Platform">
+             <summary>
+             Clase para manejar la Platform de ATBO.
+             </summary>
+             <remarks>
+            Esta biblioteca se encuentra dentro del archivo DsaCommon.dll
+             Esta incluida en en el Namespace Dsa.Dbms
+            </remarks>
+        </member>
+        <member name="P:Dsa.Common.Platform.PlatformID">
+            <summary>
+            Obtiene o asigna el ID de la plataforma
+            </summary>
+            <value>Un int con el ID de la Plataforma.</value>
+            <remarks>Ejemplo: 458</remarks>
+        </member>
+        <member name="P:Dsa.Common.Platform.PlatformName">
+            <summary>
+            Obtiene o asigna el nombre de la plataforma.
+            </summary>
+            <value>Un string con el nombre de la plataforma.</value>
+            <remarks>Ejemplo: W-CAR</remarks>
+        </member>
+        <member name="P:Dsa.Common.Platform.PlatformDescription">
+            <summary>
+            Obtiene o asigna la descripción de la plataforma.
+            </summary>
+            <value>Un string con la descripción de la plataforma.</value>
+            <remarks>Ejemplo: IMPALA/MONTE CARLO GRAND PRIX</remarks>
+        </member>
+        <member name="P:Dsa.Common.Platform.Pcust">
+            <summary>
+            Obtiene o asigna la letra del cliente.
+            </summary>
+            <value>Un <i>string</i> con la letra del cliente.</value>
+        </member>
+        <member name="P:Dsa.Common.Platform.Psuff">
+            <summary>
+            Obtiene o asigna la letra de la plaforma.
+            </summary>
+            <value>Un <i>string</i> con la letra de la plaforma.</value>
+        </member>
+        <member name="P:Dsa.Common.Platform.ObjStat">
+            <summary>
+            Obtiene el estado del objeto tipo Stat
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Platform.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto tipo string.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platform.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Platform"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platform.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Platform"/>.
+            </summary>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.Platform.#ctor(System.Int32)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Platform"/>.
+            </summary>
+            <param name="PlatID">Un <i>int</i> con el ID de la plataforma.</param>
+        </member>
+        <member name="M:Dsa.Common.Platform.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Platform"/>.
+            </summary>
+            <param name="PlatID">Un <i>int</i> con el ID de la plataforma.</param>
+            <param name="UserName">El logon ID del usuario.</param>
+            <param name="usrPassword">El password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.Platform.Save">
+            <summary>
+            Graba la plataforma.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platform.Update">
+            <summary>
+            Graba la plataforma.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platform.GetNextPCustID(System.String)">
+            <summary>
+            Obtiene el siguiente ID para una plataforma.
+            </summary>
+            <returns>Un <i>string</i> con el Id de la plataforma</returns>
+        </member>
+        <member name="M:Dsa.Common.Platform.CheckInCust(System.Data.DataTable,System.Char)">
+            <summary>
+            Revisa si la letra esta disponible para el sufijo de la plataforma
+            </summary>
+            <param name="dt">Un <i>DataTable con la lista de letras ya usadas</i></param>
+            <param name="psuff">Un <i>string</i> con la letra que se quiere revisar.</param>
+            <returns><i>True</i> si la letra ya ha sido usada; <i>False</i> si está disponible</returns>
+        </member>
+        <member name="M:Dsa.Common.Platform.Delete">
+            <summary>
+            Marca el estado del objeto para ser borrarlo
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platform.SetPreLoaded">
+            <summary>
+            Cambia el objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Platform.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Platform.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Platform.DeleteNow">
+            <summary>
+            Marca el objeto para ser borrado y ejecuta inmediatamente el Metodo Save(); para eliminar el registro de la tabla.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.Position">
+            <summary>
+            Objeto para mannejar el puesto de los empleados.
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Position.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Position.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Position.Code">
+            <summary>
+            Obtiene o asigna codigo de la posicion.
+            </summary>
+            <value>Un <i>string</i> con codigo de la posicion.</value>
+        </member>
+        <member name="P:Dsa.Common.Position.Name">
+            <summary>
+            Obtiene o asigna nonbre o descripcion de la posicion.
+            </summary>
+            <value>Un <i>string</i> con nonbre o descripcion de la posicion.</value>
+        </member>
+        <member name="P:Dsa.Common.Position.PosID">
+            <summary>
+            Obtiene Id de la posicion.
+            </summary>
+            <value>Un <i>long</i> con el Id de la posicion.</value>
+        </member>
+        <member name="M:Dsa.Common.Position.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Position"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Position.#ctor(System.Int64)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Position"/>.
+            </summary>
+            <param name="positionID">Id de la position</param>
+        </member>
+        <member name="M:Dsa.Common.Position.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Position"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Position.#ctor(System.Int64,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Position"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Position.Save">
+            <summary>
+            Grabar los datos en la tabla position.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Position.Delete">
+            <summary>
+            Cambia el estado del objeto a Delete para borrarlo con el metodo Save.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Position.SetPreLoaded">
+            <summary>
+            Cambia el estado del objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Position.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Position.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Position.DeleteNow">
+            <summary>
+            Marca el objeto para ser borrado y ejecuta inmediatamente el Metodo Save(); para eliminar el registro de la tabla.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.Positions">
+            <summary>
+            Clasificacion del del puesto del empleado
+            </summary>
+            <seealso cref="T:Dsa.Common.ILoadable" />
+            <seealso cref="T:Dsa.Common.IListable" />
+        </member>
+        <member name="P:Dsa.Common.Positions.PositionsRecords">
+            <summary>
+            Obtiene lista de posisiones para el empleado.
+            </summary>
+            <value>Un <i>DataType</i> con lista de posisiones para el empleado.</value>
+        </member>
+        <member name="P:Dsa.Common.Positions.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>Stat</i> con el estado del objeto.</value>
+        </member>
+        <member name="P:Dsa.Common.Positions.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>Un <i>string</i> con el estado del objeto.</value>
+        </member>
+        <member name="M:Dsa.Common.Positions.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Positions"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Positions.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Positions.FillFields(Dsa.Dbms.GetData)">
+            <summary>
+            Fills the fields.
+            </summary>
+            <param name="gd">The gd.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Positions.FillField(System.Data.DataRow)">
+            <summary>
+            Fills the field.
+            </summary>
+            <param name="dr">The dr.</param>
+        </member>
+        <member name="M:Dsa.Common.Positions.Refresh">
+            <summary>
+            Reinicia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Positions.Add(System.Object)">
+            <summary>
+            Agregar a la lista
+            </summary>
+            <param name="obj">Objeto de la misma clase de la lista</param>
+        </member>
+        <member name="M:Dsa.Common.Positions.Clear">
+            <summary>
+            Limpia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Positions.Contains(System.Object)">
+            <summary>
+            Determina si en la lista existe un objeto a buscar.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Common.Positions.CopyTo(System.Object[],System.Int32)">
+            <summary>
+            Copia un objeto que se encuenta en la lista.
+            </summary>
+            <param name="array">Arreglo del Objeto</param>
+            <param name="arrayIndex">Indice el objeto a copiar.</param>
+        </member>
+        <member name="M:Dsa.Common.Positions.Remove(System.Object)">
+            <summary>
+            Elimina un objeto en especifico.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Common.Positions.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.Proveedor">
+            <summary>
+            Clase para el manejo de provedor del material.
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Lwwhen">
+            <summary>
+            Obtiene o asigna la fecha en que fue actualizado el registro.
+            </summary>
+            <value>
+            Un <i>DateTime</i> con la fecha en que fue actualizado el registro.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Lwwho">
+            <summary>
+            Obtiene o asigna el login del usuario que actualizo el registro.
+            </summary>
+            <value>
+            Un <i>string</i> con el login del usuario que actualizo el registro.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Wwhen">
+            <summary>
+            Obtiene o asigna la fecha cuando fue agregado el registro.
+            </summary>
+            <value>
+            Un <i>DateTime</i> con la fecha cuando fue agregado el registro.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Wwho">
+            <summary>
+            Obtiene o asigna el login quien agrego el registro.
+            </summary>
+            <value>
+            Un <i>string</i> con el login quien agrego el registro.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Status">
+            <summary>
+            Obtiene o asigna el estado el registro.
+            </summary>
+            <value>
+            Un <i>string</i> con el estado el registro.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Moneda">
+            <summary>
+            Obtiene o asigna el tipo de mondeda que acepta el proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con el tipo de mondeda que acepta el proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.SolicitadoPor">
+            <summary>
+            Obtiene o asigna el nombre quien solicito el proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con el nombre quien solicito el proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Comentario">
+            <summary>
+            Obtiene o asigna comentarios para el proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con comentarios para el proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Contacto">
+            <summary>
+            Obtiene o asigna el nombre del contacto con el proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con el nombre del contacto con el proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.RFC">
+            <summary>
+            Obtiene o asigna el registro federal de contribuyentes del proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con el registro federal de contribuyentes del proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Mail2">
+            <summary>
+            Obtiene o asigna el correo electronico del proveedor 2.
+            </summary>
+            <value>
+            Un <i>string</i> con el correo electronico del proveedor 2.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Mail">
+            <summary>
+            Obtiene o asigna el correo electronico.
+            </summary>
+            <value>
+            Un <i>string</i> con el correo electronico.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Fax">
+            <summary>
+            Obtiene o asigna el numero de Fax del proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con el numero de Fax del proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Telefono">
+            <summary>
+            Obtiene o asigna telefono del proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con telefono del proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Nacionalidad">
+            <summary>
+            Obtiene o asigna Nacionalidad el proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con Nacionalidad el proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.CodigoPostal">
+            <summary>
+            Obtiene o asigna el codigo postal del domicilio del proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con el codigo postal del domicilio del proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Estado">
+            <summary>
+            Obtiene o asigna el estado del domicilio del proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con el estado del domicilio del proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Ciudad">
+            <summary>
+            Obtiene o asigna la ciudad el proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con la ciudad el proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Direccion">
+            <summary>
+            Obtiene o asigna la direccion del proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con la direccion del proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.APS">
+            <summary>
+            Obtiene o asigna el nuemero de proveedor de ATBO.
+            </summary>
+            <value>
+            Un <i>long</i> con el nuemero de proveedor de ATBO.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.Nombre">
+            <summary>
+            Obtiene o asigna el nombre del proveedor.
+            </summary>
+            <value>
+            Un <i>string</i> con el nombre del proveedor.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>
+            Un <i>Stat</i> con el estado del objeto.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedor.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>
+            Un <i>string</i> con el estado del objeto.
+            </value>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Proveedor"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Proveedor"/>.
+            </summary>
+            <param name="accountName">login del usuario.</param>
+            <param name="accountPassword">Password del usuario.</param>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.#ctor(System.Int64)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Proveedor"/>.
+            </summary>
+            <value>Un long con Id del proveedor.</value>			
+        </member>
+        <member name="M:Dsa.Common.Proveedor.#ctor(System.Int64,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:Dsa.Common.Proveedor"/>.
+            </summary>
+            <param name="aps">The aps.</param>
+            <param name="accountName">login del usuario.</param>
+            <param name="accountPassword">Password del usuario.</param>
+            <value>Un long con Id del proveedor.</value>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.GetProvedorPorID(System.Int64)">
+            <summary>
+            Obtiene los datos por el id proveedor.
+            </summary>
+            <param name="aps">The aps.</param>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.ResetFields">
+            <summary>
+            Inicializa Campos del objeto.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.Save">
+            <summary>
+            Inserta, Actualiza o borra de la base de datos seg�n el estado del objeto.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.Delete">
+            <summary>
+            Marca el objeto para ser borrado de la base de datos cuando se ejecute el método Save()
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Proveedor.DeleteNow">
+            <summary>
+            Marca el objeto para ser borrado y ejecuta inmediatamente el Metodo Save(); para eliminar el registro de la tabla.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.Proveedores">
+            <summary>
+            Clase para mostrar los proveedores registrados
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Proveedores.ProveedoresRegistrados">
+            <summary>
+            Obtiene la lista de proveedores registrados.
+            </summary>
+            <value>
+            Un List con la lista de proveedores registrados.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedores.ProveedoresActivos">
+            <summary>
+            Obtiene la lista de provedores activos.
+            </summary>
+            <value>
+            Un <i>List</i> con la lista de provedores activos.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedores.ProveedoresInactivos">
+            <summary>
+            Obtiene la lista de proveedores inactivos.
+            </summary>
+            <value>
+            Un <i>List</i> con la lista de proveedores inactivos.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedores.ObjStat">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>
+            Un <i>Stat</i> con el estado del objeto.
+            </value>
+        </member>
+        <member name="P:Dsa.Common.Proveedores.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto.
+            </summary>
+            <value>
+            Un <i>string</i> con el estado del objeto.
+            </value>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.#ctor">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="P:Dsa.Common.Proveedores.ProveedoresRegistrados"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="P:Dsa.Common.Proveedores.ProveedoresRegistrados"/>.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.GetProveedores">
+            <summary>
+            Obtiene todos los registros de lo proveedores.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.SetPreLoaded">
+            <summary>
+            Cambia el objeto a Preloaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.Refresh">
+            <summary>
+            Refresca la lista de proveedores.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.LoadData(System.String,Dsa.Common.DbmsParameters)">
+            <summary>
+            Loads the data.
+            </summary>
+            <param name="SentenciaSQL">The sentencia SQL.</param>
+            <param name="parameters">The parameters.</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.FillField(System.Data.DataRow)">
+            <summary>
+            Asigna los valores a los campos.
+            </summary>
+            <param name="dr">Datarow a ingresar</param>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.Add(System.Object)">
+            <summary>
+            Agregar a la lista
+            </summary>
+            <param name="obj">Objeto de la misma clase de la lista Proveedor</param>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.Clear">
+            <summary>
+            Limpia la lista.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.Contains(System.Object)">
+            <summary>
+            Determina si en la lista existe un objeto a buscar.
+            </summary>
+            <param name="obj">The Proveedor object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.CopyTo(System.Object[],System.Int32)">
+            <summary>
+            Copia un objeto que se encuenta en la lista.
+            </summary>
+            <param name="array">Arreglo del Objeto</param>
+            <param name="arrayIndex">Indice el objeto a copiar.</param>
+        </member>
+        <member name="M:Dsa.Common.Proveedores.Remove(System.Object)">
+            <summary>
+            Elimina un objeto en especifico.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dsa.Common.Serie">
+            <summary>
+            Crea un objeto tipo Serie para obtener las series de los Arneses
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Serie.ObjStat">
+            <summary>
+            Obtiene el estado del objeto tipo Stat.
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Serie.ObjStatString">
+            <summary>
+            Obtiene el estado del objeto tipo string.
+            </summary>
+        </member>
+        <member name="P:Dsa.Common.Serie.SerieID">
+            <summary>
+            Obtiene o asigna el serieID.
+            </summary>
+            <value>Un <i>int</i> con el serieID.</value>
+        </member>
+        <member name="M:Dsa.Common.Serie.SetPreLoaded">
+            <summary>
+            Cambia el objeto a PreLoaded cargado por un objeto externo.
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.Stat">
+            <summary>
+            Tipo de variable para controlar los estados de un objeto.
+            </summary>
+        </member>
+        <member name="F:Dsa.Common.Stat.Empty">
+            <summary>
+            Vacío
+            </summary>
+        </member>
+        <member name="F:Dsa.Common.Stat.New">
+            <summary>
+            Nuevo
+            </summary>
+        </member>
+        <member name="F:Dsa.Common.Stat.Saved">
+            <summary>
+            Guardado en la Base de Datos.
+            </summary>
+        </member>
+        <member name="F:Dsa.Common.Stat.Loaded">
+            <summary>
+            Cargado desde la base de datos.
+            </summary>
+        </member>
+        <member name="F:Dsa.Common.Stat.Changed">
+            <summary>
+            Cambiado.
+            </summary>
+        </member>
+        <member name="F:Dsa.Common.Stat.Deleted">
+            <summary>
+            Borrado.
+            </summary>
+        </member>
+        <member name="F:Dsa.Common.Stat.PreLoaded">
+            <summary>
+            Cargado por objeto externo
+            </summary>
+        </member>
+        <member name="T:Dsa.Common.Util">
+            <summary>
+            Clase con las utilerias comunes a todos los sistemas.
+            </summary>
+        </member>
+        <member name="M:Dsa.Common.Util.GetNextID(System.String,System.String)">
+            <summary>
+            Metodo para calcular el siguiente ID de una tabla.
+            </summary>
+            <param name="strTable">El nombre de la tabla.</param>
+            <param name="strField">El nombre del campo.</param>
+            <returns>Un <i>long</i> con el siguiente ID de la tabla</returns>
+        </member>
+        <member name="M:Dsa.Common.Util.GetNextID(System.String,System.String,System.String,System.String)">
+            <summary>
+            Metodo para calcular el siguiente ID de una tabla con un usuario especifico
+            </summary>
+            <param name="strTable">El nombre de la tabla.</param>
+            <param name="strField">El nombre del campo.</param>
+            <returns>Un <i>long</i> con el siguiente ID de la tabla</returns>
+            <param name="UserName">Login del usuario</param>
+            <param name="UserPasswrod">Password del usuario </param>
+        </member>
+        <member name="M:Dsa.Common.Util.StringToPath(System.String,System.Int32)">
+            <summary>
+            Metodo para separar una ruta con diagonales.
+            </summary>
+            <param name="strString">La cadena sin las diagonales.</param>
+            <param name="NumOfChars">El numero de caracteres entre diagonales.</param>
+            <returns>Un <i>string</i> con la cadena con las diagonales incluidas.</returns>
+        </member>
+        <member name="M:Dsa.Common.Util.GetBoardTypeID(System.String)">
+            <summary>
+            Obtiene el Id del tipo de tablero
+            </summary>
+            <param name="boardType">La descripcion del tipo de tablero.</param>
+            <returns>Un <i>string</i> con el ID del tipo de tablero</returns>
+        </member>
+        <member name="M:Dsa.Common.Util.GetBoardTypeDescription(System.String)">
+            <summary>
+            Obtiene la descripcion del tablero
+            </summary>
+            <param name="boardTypeID">El ID del tablero.</param>
+            <returns>Un <i>string</i> con la descripcion del tablero</returns>
+        </member>
+        <member name="M:Dsa.Common.Util.GetPlatID(System.String)">
+            <summary>
+            Obtiene el platid de la plataforma
+            </summary>
+            <param name="platfDescription">El plantfDecription.</param>
+            <returns>Un <i>string</i> con el platid de la plataforma.</returns>
+        </member>
+        <member name="M:Dsa.Common.Util.GetHTML(System.Data.DataTable,System.Boolean,System.String)">
+            <summary>
+            Regresa una tabla en Html a partir de un DataTable
+            </summary>
+            <param name="dt">DataTable con los datos para construir la tabla html</param>
+            <param name="includeHeader">Boleano si se incluye nombre de los campos del DataTable</param>
+            <param name="caption">Titulo de la tabla html</param>
+            <returns>Regresa una tabla Html con los datos del DataTable </returns>
+        </member>
+        <member name="M:Dsa.Common.Util.GetHTML(System.Data.DataTable,System.Boolean)">
+            <summary>
+            Regresa una tabla en Html a partir de un DataTable
+            </summary>
+            <param name="dt">DataTable con los datos para construir la tabla html</param>
+            <param name="includeHeader">Boleano si se incluye nombre de los campos del DataTable</param>
+            <returns>Regresa una tabla Html con los datos del DataTable </returns>
+        </member>
+        <member name="M:Dsa.Common.Util.GetHTML(System.Data.DataTable,System.String)">
+            <summary>
+            Regresa una tabla en Html a partir de un DataTable
+            </summary>
+            <param name="dt">DataTable con los datos para construir la tabla html</param>
+            <param name="caption">Titulo de la tabla html</param>
+            <returns>Regresa una tabla Html con los datos del DataTable </returns>
+        </member>
+        <member name="M:Dsa.Common.Util.MakeCaption(System.String,System.Text.StringBuilder)">
+            <summary>
+            Genera la titulo de la tabla html
+            </summary>
+            <param name="caption">Titulo de la Tabla Hmtl</param>
+            <param name="sb">StringBiulder que forma el Html</param>
+        </member>
+        <member name="M:Dsa.Common.Util.MakeHeader(System.Data.DataTable,System.Text.StringBuilder)">
+            <summary>
+            Crea el encabezado de la tabla Html con los nombre de los campos del DataTable
+            </summary>
+            <param name="dt">DataTable del que se obtiene los campos  mostrar</param>
+            <param name="sb">StringBuilder que forma el Html</param>
+        </member>
+        <member name="M:Dsa.Common.Util.MakeTable(System.Data.DataTable,System.Text.StringBuilder)">
+            <summary>
+            Crea el cuerpo de la tabla Html con los datos del DataTable
+            </summary>
+            <param name="dt">DataTable con los datos que se van a mostrar</param>
+            <param name="sb">StringBuilder que forma el Html</param>
+        </member>
+        <member name="M:Dsa.Common.Util.GetHTML``1(System.Collections.Generic.List{``0},System.Collections.Hashtable)">
+            <summary>
+            Obtiene un string con la estructura de una tabla a partir del TH
+            </summary>
+            <typeparam name="T">Tipo del objeto  que se quiere mostrar</typeparam>
+            <param name="list">Lista de objeto que se dease tablar </param>
+            <param name="hst">tabla de columnas que desea mostar , con el titulo que desea mostar</param>
+            <returns>un string con la estructura para una tabla</returns>
+            <example>el hasta table la key es el atributo original del objetio y el value es el nuevo nombre del atributo que desea mostar</example>
+        </member>
+        <member name="M:Dsa.Common.Util.IsUserAuthorized(System.String,System.String)">
+            <summary>
+            Determina si el usuario esta autorizado para usar la intefase especificada.
+            </summary>
+            <param name="interfase">La interfase.</param>
+            <param name="userName">El LogonID del usuario.</param>
+            <returns>
+              <c>true</c> si el usuario está autorizado para usar la interfase; en caso contrario, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Dsa.Common.Util.ToDataTable``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Regresa un DataTable a partir de una lista genérica.
+            </summary>
+            <typeparam name="T">Una lista genérica</typeparam>
+            <param name="list">La lista a convertir.</param>
+            <returns>Un DataTable con los datos en la lista</returns>
+        </member>
+        <member name="M:Dsa.Common.Util.Resize(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            Regresa un BitMap con la imagen redimensionada
+            </summary>
+            <param name="currentBitmap">La imagen a redimensionar</param>
+            <param name="newWidth">La longitud</param>
+            <param name="newHeight">La altura</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

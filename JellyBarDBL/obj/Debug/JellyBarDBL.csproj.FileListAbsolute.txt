@@ -1,0 +1,16 @@
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\JellyBarDBL.dll
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\JellyBarDBL.pdb
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\Common.dll
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\Dbms.dll
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\DsaCrypt.dll
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\Common.pdb
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\Common.xml
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\Dbms.pdb
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\Dbms.xml
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\DsaCrypt.pdb
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\bin\Debug\DsaCrypt.xml
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\obj\Debug\JellyBarDBL.csprojAssemblyReference.cache
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\obj\Debug\JellyBarDBL.csproj.CoreCompileInputs.cache
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\obj\Debug\JellyBarDBL.csproj.CopyComplete
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\obj\Debug\JellyBarDBL.dll
+C:\Zelene\Sistemas\JellyBar\JellyBarDBL\obj\Debug\JellyBarDBL.pdb
